@@ -1,0 +1,156 @@
+.comments{
+    width: 100%;
+    height: auto;
+    padding-left:30px;
+    background: #fff;
+    margin: 20px 0;
+}
+
+.comments .h{
+    position: fixed;
+    left:0;
+    top:0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;   
+    background: #fff;
+    height: 84px;
+    border-bottom: 2px solid rgba(0,0,0,.15);
+}
+
+.comments .h .item{
+    display: inline-block;
+    height: 82px;
+    width: 50%;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.comments .h .item .txt{
+    display: inline-block;
+    height: 82px;
+    padding: 0 20px;
+    line-height: 82px;
+    color: #333;
+    font-size: 30px;
+    width: 170px;
+}
+
+.comments .h .item.active .txt{
+    color: #ab2b2b;
+    border-bottom: 4px solid #ab2b2b;
+}
+
+.comments .b{
+    margin-top: 85px;
+    height: auto;
+    width: 720px;
+}
+
+.comments .b.no-h{
+    margin-top: 0;
+}
+
+.comments .item{
+    height: auto;
+    width: 720px;
+    overflow: hidden;
+    border-bottom: 2px solid #d9d9d9;
+    padding-bottom: 25px;
+}
+
+.comments .info{
+    height: 127px;
+    width: 100%;
+    padding: 33px 0 27px 0;
+}
+
+.comments .user{
+    float: left;
+    width: auto;
+    height: 67px;
+    line-height: 67px;
+    font-size: 0;
+}
+
+.comments .user image{
+    float: left;
+    width: 67px;
+    height: 67px;
+    margin-right: 17px;
+    border-radius: 50%;
+}
+
+.comments .user text{
+    display: inline-block;
+    width: auto;
+    height: 66px;
+    overflow: hidden;
+    font-size: 29px;
+    line-height: 66px;
+}
+
+.comments .time{
+    display: block;
+    float: right;
+    width: auto;
+    height: 67px;
+    line-height: 67px;
+    color: #7f7f7f;
+    font-size: 25px;
+    margin-right: 30px;
+}
+
+.comments .comment{
+    width: 720px;
+    padding-right: 30px;
+    line-height: 45.8px;
+    font-size: 29px;
+    margin-bottom: 16px;
+}
+
+.comments .imgs{
+    width: 720px;
+    height: 150px;
+    margin-bottom: 25px;
+}
+
+.comments .imgs .img{
+    height: 150px;
+    width: 150px;
+    margin-right: 28px;
+}
+
+.comments .spec{
+    width: 720px;
+    height: 25px;
+    font-size: 24px;
+    color: #999;
+}
+
+.comments .spec .item{
+    color: #7f7f7f;
+    font-size: 25px;
+}
+
+.comments .customer-service{
+    width: 690px;
+    height: auto;
+    overflow: hidden;
+    margin-top: 23px;
+    background: rgba(0,0,0,.03);
+    padding: 21px;
+}
+
+
+.comments .customer-service .u{
+    font-size: 24px;
+    color: #333;
+    line-height: 37.5px;
+}
+
+.comments .customer-service .c{
+    font-size: 24px;
+    color: #999;
+    line-height: 37.5px;
+}

@@ -1,0 +1,123 @@
+page{
+    min-height: 100%;
+    width: 100%;
+    background: #f4f4f4;
+}
+
+.container{
+  padding-top: 20px;
+}
+
+.total{
+  height: 104px;
+  background: #fff;
+  width: 100%;
+  line-height: 104px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.total .label{
+  float: left;
+}
+
+.total .txt{
+  float: right;
+}
+
+.pay-list{
+    margin-top: 30px;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+}
+.pay-list .h{
+    width: 100%;
+    height: 24px;
+    line-height: 24px;
+    margin-left: 31.25px;
+    margin-bottom: 31.25px;
+}
+
+.pay-list .item{
+    height: 108px;
+    padding-left: 31.25px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #f4f4f4;
+}
+
+.pay-list .checkbox{
+    background: url(http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/checkbox-sed825af9d3-a6b8540d42.png) 0 -448px no-repeat;
+    background-size: 38px 486px;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 30px;
+}
+
+.pay-list .checkbox.checked{
+    background: url(http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/checkbox-sed825af9d3-a6b8540d42.png) 0 -192px no-repeat;
+    background-size: 38px 486px;
+}
+
+.pay-list .icon-alipay{
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/payMethod-s3c1faebee4-d754da9c65.png);
+    background-repeat: no-repeat;
+    background-size: 56.25px 189.583px;
+    margin-right: 10.5px;
+    width: 56.25px;
+    height: 56.25px;
+}
+
+.pay-list .icon-net{
+    display: inline-block;
+    vertical-align: middle;
+    background: url(http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/sprites/payMethod-s3c1faebee4-d754da9c65.png) 0 -66.7px no-repeat;
+    background-size: 56.25px 189.583px;
+    margin-right: 10.5px;
+    width: 56.25px;
+    height: 56.25px;
+}
+
+.pay-list .icon{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10.5px;
+    width: 56.25px;
+    height: 56.25px;
+}
+
+.pay-list .name{
+    display: inline-block;
+    vertical-align: middle;
+    height: 56.25px;
+    line-height: 56.25px;
+}
+
+.pay-btn{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    line-height: 100px;
+    background: #b4282d;
+    color: #fff;
+    font-size: 30px;
+}
+
+.tips{
+  height: 40px;
+  width: 100%;
+  font-size: 24px;
+  color: #999;
+  line-height: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
