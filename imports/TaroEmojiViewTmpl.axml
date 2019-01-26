@@ -1,0 +1,20 @@
+<block>
+    <block>
+        <view class="WxEmojiView wxParse-inline" style="{{item.styleStr}}">
+            <block a:key="{{true}}" a:for="{{item.textArray}}" a:for-item="item" a:for-index="index">
+                <block>
+                    <block a:if="{{item.node == 'text'}}">
+                        <block class="{{item.text == '\\n' ? 'wxParse-hide' : ''}}">{{item.text}}</block>
+                    </block>
+                    <block a:else>
+                        <block a:if="{{item.node == 'element'}}">
+                            <block>
+                                <image class="wxEmoji" src="{{item.baseSrc + item.text}}"></image>
+                            </block>
+                        </block>
+                    </block>
+                </block>
+            </block>
+        </view>
+    </block>
+</block>

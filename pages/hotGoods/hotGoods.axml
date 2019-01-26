@@ -1,0 +1,35 @@
+<block>
+    <view class="container">
+        <view class="brand-info">
+            <view class="name">
+                <image class="img" src="{{bannerInfo.img_url}}" background-size="cover"></image>
+                <view class="info-box">
+                    <view class="info"><text class="txt">{{bannerInfo.name}}</text><text class="line"></text>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="sort">
+            <view class="sort-box">
+                <view class="{{'item ' + (currentSortType == 'default' ? 'active' : '')}}" onTap="openSortFilter" id="defaultSort"><text class="txt">综合</text>
+                </view>
+                <view class="{{'item by-price ' + (currentSortType == 'price' ? 'active' : '') + ' ' + (currentSortOrder == 'asc' ? 'asc' : 'desc')}}" onTap="openSortFilter" id="priceSort"><text class="txt">价格</text>
+                </view>
+                <view class="{{'item ' + (currentSortType == 'category' ? 'active' : '')}}" onTap="openSortFilter" id="categoryFilter"><text class="txt">分类</text>
+                </view>
+            </view>
+            <view class="sort-box-category" wx-if="{{categoryFilter}}">
+                <view class="{{'item ' + (item.$original.checked ? 'active' : '')}}" a:key="$loopState__temp2" data-category-index="{{index}}" onTap="selectCategory" a:for="{{loopArray0}}" a:for-item="item" a:for-index="index">{{item.$original.name}}</view>
+            </view>
+        </view>
+        <view class="cate-item">
+            <view class="b">
+                <block a:key="unique" a:for="{{goodsList}}" a:for-item="iitem" a:for-index="iindex">
+                    <navigator class="{{'item ' + (iindex % 2 == 0 ? 'item-b' : '')}}" url="{{'../goods/goods?id=' + iitem.id}}">
+                        <image class="img" src="{{iitem.list_pic_url}}" background-size="cover"></image><text class="name">{{iitem.name}}</text><text class="price">{{'￥' + iitem.retail_price}}</text>
+                    </navigator>
+                </block>
+            </view>
+        </view>
+    </view>
+</block>

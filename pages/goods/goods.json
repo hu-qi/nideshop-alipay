@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "taro-parse-tmpl": "../../imports/TaroParseTmpl"
+  }
+}

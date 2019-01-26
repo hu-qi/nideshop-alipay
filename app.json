@@ -1,0 +1,87 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/catalog/catalog",
+    "pages/newGoods/newGoods",
+    "pages/hotGoods/hotGoods",
+    "pages/ucenter/address/address",
+    "pages/ucenter/addressAdd/addressAdd",
+    "pages/ucenter/footprint/footprint",
+    "pages/ucenter/order/order",
+    "pages/ucenter/orderDetail/orderDetail",
+    "pages/ucenter/express/express",
+    "pages/ucenter/feedback/feedback",
+    "pages/ucenter/coupon/coupon",
+    "pages/ucenter/collect/collect",
+    "pages/auth/login/login",
+    "pages/auth/register/register",
+    "pages/auth/reset/reset",
+    "pages/pay/pay",
+    "pages/payResult/payResult",
+    "pages/ucenter/index/index",
+    "pages/topic/topic",
+    "pages/comment/comment",
+    "pages/commentPost/commentPost",
+    "pages/topicComment/topicComment",
+    "pages/brand/brand",
+    "pages/brandDetail/brandDetail",
+    "pages/search/search",
+    "pages/category/category",
+    "pages/cart/cart",
+    "pages/shopping/checkout/checkout",
+    "pages/shopping/address/address",
+    "pages/shopping/addressAdd/addressAdd",
+    "pages/goods/goods",
+    "pages/topicDetail/topicDetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "titleBarColor": "#fff",
+    "defaultTitle": "亓行商城",
+    "navigationBarTextStyle": "black",
+    "pullRefresh": true
+  },
+  "tabBar": {
+    "backgroundColor": "#fafafa",
+    "borderStyle": "white",
+    "selectedColor": "#b4282d",
+    "color": "#666",
+    "items": [
+      {
+        "pagePath": "pages/index/index",
+        "icon": "static/images/ic_menu_choice_nor.png",
+        "activeIcon": "static/images/ic_menu_choice_pressed.png",
+        "name": "首页"
+      },
+      {
+        "pagePath": "pages/topic/topic",
+        "icon": "static/images/ic_menu_topic_nor.png",
+        "activeIcon": "static/images/ic_menu_topic_pressed.png",
+        "name": "专题"
+      },
+      {
+        "pagePath": "pages/catalog/catalog",
+        "icon": "static/images/ic_menu_sort_nor.png",
+        "activeIcon": "static/images/ic_menu_sort_pressed.png",
+        "name": "分类"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "icon": "static/images/ic_menu_shoping_nor.png",
+        "activeIcon": "static/images/ic_menu_shoping_pressed.png",
+        "name": "购物车"
+      },
+      {
+        "pagePath": "pages/ucenter/index/index",
+        "icon": "static/images/ic_menu_me_nor.png",
+        "activeIcon": "static/images/ic_menu_me_pressed.png",
+        "name": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

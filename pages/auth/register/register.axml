@@ -1,0 +1,34 @@
+<block>
+    <view class="container">
+        <view class="form-box">
+            <view class="form-item">
+                <input class="username" value="{{username}}" onInput="bindUsernameInput" placeholder="用户名" auto-focus="{{true}}" />
+                <block a:if="{{username.length > 0}}">
+                    <image id="clear-username" class="clear" src="{{anonymousState__temp}}" onTap="clearInput"></image>
+                </block>
+            </view>
+            <view class="form-item">
+                <input class="password" value="{{password}}" password="{{true}}" onInput="bindPasswordInput" placeholder="密码" />
+                <block a:if="{{password.length > 0}}">
+                    <image class="clear" id="clear-password" src="{{anonymousState__temp2}}" onTap="clearInput"></image>
+                </block>
+            </view>
+            <view class="form-item">
+                <input class="password" value="{{confirmPassword}}" password="{{true}}" onInput="bindConfirmPasswordInput" placeholder="确认密码" />
+                <block a:if="{{confirmPassword.length > 0}}">
+                    <image class="clear" id="clear-confirm-password" src="{{anonymousState__temp3}}" onTap="clearInput"></image>
+                </block>
+            </view>
+            <view class="form-item-code">
+                <view class="form-item code-item">
+                    <input class="code" value="{{code}}" onInput="bindCodeInput" placeholder="验证码" />
+                    <block a:if="{{code.length > 0}}">
+                        <image class="clear" id="clear-code" src="{{anonymousState__temp4}}" onTap="clearInput"></image>
+                    </block>
+                </view>
+                <image class="code-img" src="https://dl.reg.163.com/cp?pd=yanxuan_web&pkid=SkeBZeG&random=1489903563234"></image>
+            </view>
+            <button type="default" class="login-btn" onTap="startRegister">注册</button>
+        </view>
+    </view>
+</block>

@@ -1,0 +1,22 @@
+<block>
+    <view class="container">
+        <view class="cate-nav">
+            <scroll-view scroll-x="true" class="cate-nav-body" style="width: 750rpx;" scroll-left="{{scrollLeft}}">
+                <view class="{{'item ' + (id == item.id ? 'active' : '')}}" data-id="{{item.id}}" data-index="{{index}}" onTap="switchCate" a:for="{{navList}}" a:for-item="item" a:for-index="index">
+                    <view class="name">{{item.name}}</view>
+                </view>
+            </scroll-view>
+        </view>
+        <scroll-view scroll-y="true" scroll-top="{{scrollTop}}" style="{{'height:' + scrollHeight + ';'}}">
+            <view class="cate-item">
+                <view class="h"><text class="name">{{currentCategory.name}}</text><text class="desc">{{currentCategory.front_name}}</text>
+                </view>
+                <view class="b">
+                    <navigator class="{{'item ' + ((iindex + 1) % 2 == 0 ? 'item-b' : '')}}" url="{{'/pages/goods/goods?id=' + iitem.id}}" a:for="{{goodsList}}" a:for-item="iitem" a:for-index="iindex">
+                        <image class="img" src="{{iitem.list_pic_url}}" background-size="cover"></image><text class="name">{{iitem.name}}</text><text class="price">{{'￥' + iitem.retail_price}}</text>
+                    </navigator>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</block>

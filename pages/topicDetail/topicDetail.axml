@@ -1,0 +1,49 @@
+<block>
+    <scroll-view class="container">
+        <scroll-view class="content">
+            <taro-parse-tmpl data="{{anonymousState__temp}}" __triggerObserer="{{ _triggerObserer }}"></taro-parse-tmpl>
+        </scroll-view>
+        <view class="topic-goods"></view>
+        <scroll-view class="comments">
+            <view class="h"><text class="t">精选留言</text>
+                <image onTap="postComment" class="i" src="http://nos.netease.com/mailpub/hxm/yanxuan-wap/p/20150730/style/img/icon-normal/comment-add-2aca147c3f.png"></image>
+            </view>
+            <block a:if="{{commentList.length > 0}}">
+                <view class="has-comments">
+                    <view class="b">
+                        <view class="item" a:key="id" a:for="{{commentList}}" a:for-item="item" a:for-index="index">
+                            <view class="info">
+                                <view class="user">
+                                    <image class="avatar" src="{{item.user_info.avatar}}"></image><text class="nickname">{{item.user_info.nickname}}</text>
+                                </view>
+                                <view class="time">{{item.add_time}}</view>
+                            </view>
+                            <view class="comment">{{item.content}}</view>
+                        </view>
+                    </view>
+                    <block a:if="{{commentCount > 5}}">
+                        <view class="load">
+                            <navigator url="{{'/pages/topicComment/topicComment?valueId=' + topic.id + '&typeId=1'}}">查看更多</navigator>
+                        </view>
+                    </block>
+                </view>
+            </block>
+            <block a:if="{{commentList.length <= 0}}">
+                <view class="no-comments">
+                    <view class="b">
+                        <image class="icon" src="http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/no-comment-560f87660a.png"></image><text class="txt">等你来留言</text>
+                    </view>
+                </view>
+            </block>
+        </scroll-view>
+        <scroll-view class="rec-box">
+            <view class="h"><text class="txt">专题推荐</text>
+            </view>
+            <view class="b">
+                <navigator class="item" url="{{'../topicDetail/topicDetail?id=' + item.id}}" a:for="{{topicList}}" a:for-item="item" a:for-index="index">
+                    <image class="img" src="{{item.scene_pic_url}}"></image><text class="title">{{item.title}}</text>
+                </navigator>
+            </view>
+        </scroll-view>
+    </scroll-view>
+</block>

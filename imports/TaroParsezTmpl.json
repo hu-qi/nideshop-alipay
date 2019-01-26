@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "taro-parse-video-tmpl": "./TaroParseVideoTmpl",
+    "taro-parse-img-tmpl": "./TaroParseImgTmpl",
+    "taro-emoji-view-tmpl": "./TaroEmojiViewTmpl"
+  }
+}

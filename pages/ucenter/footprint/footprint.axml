@@ -1,0 +1,19 @@
+<block>
+    <view class="container">
+        <view class="footprint">
+            <view class="day-item" a:key="index" a:for="{{footprintList}}" a:for-item="item" a:for-index="index">
+                <view class="day-hd">{{item[0].add_time}}</view>
+                <view class="day-list">
+                    <view class="item" data-footprint="{{iitem}}" onTouchStart="touchStart" onTouchEnd="touchEnd" onTap="deleteItem" a:key="id" a:for="{{item}}" a:for-item="iitem" a:for-index="index">
+                        <image class="img" src="{{iitem.list_pic_url}}"></image>
+                        <view class="info">
+                            <view class="name">{{iitem.name}}</view>
+                            <view class="subtitle">{{iitem.goods_brief}}</view>
+                            <view class="price">{{'￥' + iitem.retail_price}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</block>

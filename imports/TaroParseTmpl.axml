@@ -1,0 +1,7 @@
+<block>
+    <block>
+        <block a:key="{{true}}" a:for="{{wxParseData}}" a:for-item="item" a:for-index="index">
+            <taro-parsez-tmpl data="{{item}}" __triggerObserer="{{ _triggerObserer }}"></taro-parsez-tmpl>
+        </block>
+    </block>
+</block>

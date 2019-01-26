@@ -1,0 +1,28 @@
+<block>
+    <view class="container">
+        <view class="orders">
+            <navigator url="{{'../orderDetail/orderDetail?id=' + item.id}}" class="order" a:key="id" a:for="{{orderList}}" a:for-item="item" a:for-index="index">
+                <view class="h">
+                    <view class="l">{{'订单编号：' + item.order_sn}}</view>
+                    <view class="r">{{item.order_status_text}}</view>
+                </view>
+                <view class="goods" a:key="id" a:for="{{item.goodsList}}" a:for-item="gitem" a:for-index="index">
+                    <view class="img">
+                        <image src="{{gitem.list_pic_url}}"></image>
+                    </view>
+                    <view class="info"><text class="name">{{gitem.goods_name}}</text><text class="number">{{'共' + gitem.number + '件商品'}}</text>
+                    </view>
+                    <view class="status"></view>
+                </view>
+                <view class="b">
+                    <view class="l">{{'实付：￥' + item.actual_price}}</view>
+                    <view class="r">
+                        <block a:if="{{item.handleOption.pay}}">
+                            <button class="btn" data-order-index="{{index}}" onTap="payOrder(item.order_sn, item.actual_price)">去付款</button>
+                        </block>
+                    </view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+</block>

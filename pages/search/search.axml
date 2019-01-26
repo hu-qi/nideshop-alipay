@@ -1,0 +1,71 @@
+<block>
+    <scroll-view class="container" style="height: 100%;">
+        <view class="search-header">
+            <view class="input-box">
+                <image class="icon" src="http://nos.netease.com/mailpub/hxm/yanxuan-wap/p/20150730/style/img/icon-normal/search2-2fb94833aa.png"></image>
+                <input name="input" class="keywrod" focus="true" value="{{keyword}}" confirm-type="search" onInput="inputChange" onFocus="inputFocus" onConfirm="onKeywordConfirm" placeholder="{{defaultKeyword.keyword}}" />
+                <block a:if="{{keyword}}">
+                    <image class="del" onTap="clearKeyword" src="http://nos.netease.com/mailpub/hxm/yanxuan-wap/p/20150730/style/img/icon-normal/clearIpt-f71b83e3c2.png"></image>
+                </block>
+            </view>
+            <view class="right" onTap="closeSearch">取消</view>
+        </view>
+        <block a:if="{{!searchStatus}}">
+            <view class="no-search">
+                <block a:if="{{!keyword && historyKeyword.length}}">
+                    <view class="serach-keywords search-history">
+                        <view class="h"><text class="title">历史记录</text>
+                            <image class="icon" onTap="clearHistory" src="http://nos.netease.com/mailpub/hxm/yanxuan-wap/p/20150730/style/img/icon-normal/del1-93f0a4add4.png"></image>
+                        </view>
+                        <view class="b">
+                            <view class="item" onTap="onKeywordTap" data-keyword="{{item}}" hover-class="navigator-hover" a:for="{{historyKeyword}}" a:for-item="item" a:for-index="index">{{item}}</view>
+                        </view>
+                    </view>
+                </block>
+                <block a:if="{{!keyword}}">
+                    <view class="serach-keywords search-hot">
+                        <view class="h"><text class="title">热门搜索</text>
+                        </view>
+                        <view class="b">
+                            <view class="{{'item ' + (item.is_hot === 1 ? 'active' : '')}}" hover-class="navigator-hover" onTap="onKeywordTap" data-keyword="{{item.keyword}}" a:for="{{hotKeyword}}" a:for-item="item" a:for-index="index">{{item.keyword}}</view>
+                        </view>
+                    </view>
+                </block>
+                <block a:if="{{keyword}}">
+                    <view class="shelper-list">
+                        <view class="item" hover-class="navigator-hover" onTap="onKeywordTap" data-keyword="{{item}}" a:for="{{helpKeyword}}" a:for-item="item" a:for-index="index">{{item}}</view>
+                    </view>
+                </block>
+            </view>
+        </block>
+        <block a:if="{{searchStatus && goodsList.length}}">
+            <view class="search-result">
+                <view class="sort">
+                    <view class="sort-box">
+                        <view class="{{'item ' + (currentSortType == 'default' ? 'active' : '')}}" onTap="openSortFilter" id="defaultSort"><text class="txt">综合</text>
+                        </view>
+                        <view class="{{'item by-price ' + (currentSortType == 'price' ? 'active' : '') + ' ' + (currentSortOrder == 'asc' ? 'asc' : 'desc')}}" onTap="openSortFilter" id="priceSort"><text class="txt">价格</text>
+                        </view>
+                        <view class="{{'item ' + (currentSortType == 'category' ? 'active' : '')}}" onTap="openSortFilter" id="categoryFilter"><text class="txt">分类</text>
+                        </view>
+                    </view>
+                    <view class="sort-box-category" wx-if="{{categoryFilter}}">
+                        <view class="{{'item ' + (item.$original.checked ? 'active' : '')}}" a:key="$loopState__temp2" data-category-index="{{index}}" onTap="selectCategory" a:for="{{loopArray0}}" a:for-item="item" a:for-index="index">{{item.$original.name}}</view>
+                    </view>
+                </view>
+                <view class="cate-item">
+                    <view class="b">
+                        <navigator class="{{'item ' + ((iindex + 1) % 2 == 0 ? 'item-b' : '')}}" url="{{'/pages/goods/goods?id=' + iitem.id}}" a:for="{{goodsList}}" a:for-item="iitem" a:for-index="iindex">
+                            <image class="img" src="{{iitem.list_pic_url}}" background-size="cover"></image><text class="name">{{iitem.name}}</text><text class="price">{{'￥' + iitem.retail_price}}</text>
+                        </navigator>
+                    </view>
+                </view>
+            </view>
+        </block>
+        <block a:if="{{!goodsList.length && searchStatus}}">
+            <view class="search-result-empty">
+                <image class="icon" src="http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/noSearchResult-7572a94f32.png"></image><text class="text">您寻找的商品还未上架</text>
+            </view>
+        </block>
+    </scroll-view>
+</block>

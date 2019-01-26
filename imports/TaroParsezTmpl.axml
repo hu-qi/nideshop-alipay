@@ -1,0 +1,112 @@
+<block>
+    <block>
+        <block>
+            <block a:if="{{item.node == 'element'}}">
+                <block>
+                    <block>
+                        <block a:if="{{item.tag == 'button'}}">
+                            <block>
+                                <button type="default" size="mini">
+                                    <block a:key="{{true}}" a:for="{{item.nodes}}" a:for-item="item" a:for-index="index">
+                                        <taro-parsez-tmpl data="{{item}}" __triggerObserer="{{ _triggerObserer }}"></taro-parsez-tmpl>
+                                    </block>
+                                </button>
+                            </block>
+                        </block>
+                        <block a:else>
+                            <block>
+                                <block a:if="{{item.tag == 'li'}}">
+                                    <block>
+                                        <view class="{{item.classStr + ' wxParse-li'}}">
+                                            <view class="{{item.classStr + ' wxParse-li-inner'}}">
+                                                <view class="{{item.classStr + ' wxParse-li-text'}}">
+                                                    <view class="{{item.classStr + ' wxParse-li-circle'}}"></view>
+                                                </view>
+                                                <view class="{{item.classStr + ' wxParse-li-text'}}">
+                                                    <block a:key="{{true}}" a:for="{{item.nodes}}" a:for-item="item" a:for-index="index">
+                                                        <taro-parsez-tmpl data="{{item}}" __triggerObserer="{{ _triggerObserer }}"></taro-parsez-tmpl>
+                                                    </block>
+                                                </view>
+                                            </view>
+                                        </view>
+                                    </block>
+                                </block>
+                                <block a:else>
+                                    <block>
+                                        <block a:if="{{item.tag == 'video'}}">
+                                            <block>
+                                                <taro-parse-video-tmpl data="{{item}}" __triggerObserer="{{ _triggerObserer }}"></taro-parse-video-tmpl>
+                                            </block>
+                                        </block>
+                                        <block a:else>
+                                            <block>
+                                                <block a:if="{{item.tag == 'img'}}">
+                                                    <block>
+                                                        <taro-parse-img-tmpl data="{{item}}" __triggerObserer="{{ _triggerObserer }}"></taro-parse-img-tmpl>
+                                                    </block>
+                                                </block>
+                                                <block a:else>
+                                                    <block>
+                                                        <block a:if="{{item.tag == 'a'}}">
+                                                            <block>
+                                                                <view onTap="wxParseTagATap" class="{{'wxParse-inline ' + item.classStr + ' wxParse-' + item.tag}}" data-c="{{item.attr.href}}" style="{{item.styleStr}}">
+                                                                    <block a:key="{{true}}" a:for="{{item.nodes}}" a:for-item="item" a:for-index="index">
+                                                                        <taro-parsez-tmpl data="{{item}}" __triggerObserer="{{ _triggerObserer }}"></taro-parsez-tmpl>
+                                                                    </block>
+                                                                </view>
+                                                            </block>
+                                                        </block>
+                                                        <block a:else>
+                                                            <block>
+                                                                <block a:if="{{item.tag == 'table'}}">
+                                                                    <block>
+                                                                        <view class="{{item.classStr + ' wxParse-' + item.tag}}" style="{{item.styleStr}}">
+                                                                            <block a:key="{{true}}" a:for="{{item.nodes}}" a:for-item="item" a:for-index="index">
+                                                                                <taro-parsez-tmpl data="{{item}}" __triggerObserer="{{ _triggerObserer }}"></taro-parsez-tmpl>
+                                                                            </block>
+                                                                        </view>
+                                                                    </block>
+                                                                </block>
+                                                                <block a:else>
+                                                                    <block>
+                                                                        <block a:if="{{item.tagType == 'block'}}">
+                                                                            <block>
+                                                                                <view class="{{item.classStr + ' wxParse-' + item.tag}}" style="{{item.styleStr}}">
+                                                                                    <block a:key="{{true}}" a:for="{{item.nodes}}" a:for-item="item" a:for-index="index">
+                                                                                        <taro-parsez-tmpl data="{{item}}" __triggerObserer="{{ _triggerObserer }}"></taro-parsez-tmpl>
+                                                                                    </block>
+                                                                                </view>
+                                                                            </block>
+                                                                        </block>
+                                                                        <block a:else>
+                                                                            <view class="{{item.classStr + ' wxParse-' + item.tag + ' wxParse-' + item.tagType}}" style="{{item.styleStr}}">
+                                                                                <block a:key="{{true}}" a:for="{{item.nodes}}" a:for-item="item" a:for-index="index">
+                                                                                    <taro-parsez-tmpl data="{{item}}" __triggerObserer="{{ _triggerObserer }}"></taro-parsez-tmpl>
+                                                                                </block>
+                                                                            </view>
+                                                                        </block>
+                                                                    </block>
+                                                                </block>
+                                                            </block>
+                                                        </block>
+                                                    </block>
+                                                </block>
+                                            </block>
+                                        </block>
+                                    </block>
+                                </block>
+                            </block>
+                        </block>
+                    </block>
+                </block>
+            </block>
+            <block a:else>
+                <block a:if="{{item.node == 'text'}}">
+                    <block>
+                        <taro-emoji-view-tmpl data="{{item}}" __triggerObserer="{{ _triggerObserer }}"></taro-emoji-view-tmpl>
+                    </block>
+                </block>
+            </block>
+        </block>
+    </block>
+</block>

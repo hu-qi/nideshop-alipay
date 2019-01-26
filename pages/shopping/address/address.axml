@@ -1,0 +1,29 @@
+<block>
+    <view class="container">
+        <block a:if="{{addressList.length > 0}}">
+            <view class="address-list">
+                <view class="item" a:key="id" onTap="selectAddress" data-address-id="{{item.id}}" a:for="{{addressList}}" a:for-item="item" a:for-index="index">
+                    <view class="l">
+                        <view class="name">{{item.name}}</view>
+                        <block a:if="{{item.is_default}}">
+                            <view class="default">默认</view>
+                        </block>
+                    </view>
+                    <view class="c">
+                        <view class="mobile">{{item.mobile}}</view>
+                        <view class="address">{{item.full_region + item.address}}</view>
+                    </view>
+                    <view class="r">
+                        <image onTap="addressAddOrUpdate" data-address-id="{{item.id}}" class="del" src="http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/address-edit-7fee7b0d63.png"></image>
+                    </view>
+                </view>
+            </view>
+        </block>
+        <block a:if="{{addressList.length <= 0}}">
+            <view class="empty-view">
+                <image class="icon" src="http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/noAddress-26d570cefa.png"></image><text class="text">收货地址在哪里</text>
+            </view>
+        </block>
+        <view class="add-address" onTap="addressAddOrUpdate" data-address-id="0">新建</view>
+    </view>
+</block>

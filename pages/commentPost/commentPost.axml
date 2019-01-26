@@ -1,0 +1,13 @@
+<block>
+    <view class="container">
+        <view class="post-comment">
+            <view class="input-box">
+                <textarea class="content" focus="true" onInput="bindInpuntValue" maxlength="140" placeholder="留言经过筛选后，对所有人可见"></textarea><text class="count">{{140 - content.length}}</text>
+            </view>
+            <view class="btns">
+                <view class="close" onTap="onClose">取消</view>
+                <view class="post" onTap="onPost">发表</view>
+            </view>
+        </view>
+    </view>
+</block>

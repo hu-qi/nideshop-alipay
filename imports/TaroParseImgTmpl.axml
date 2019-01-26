@@ -1,0 +1,5 @@
+<block>
+    <block>
+        <image class="{{item.classStr + ' wxParse-' + item.tag}}" data-from="{{item.from}}" data-src="{{item.attr.src}}" data-idx="{{item.imgIndex}}" src="{{item.attr.src}}" mode="aspectFit" onLoad="wxParseImgLoad" onTap="wxParseImgTap" style="{{'width:' + item.width + 'px;height:' + item.height + 'px;' + item.attr.style}}"></image>
+    </block>
+</block>
