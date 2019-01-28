@@ -169,7 +169,9 @@ var _C = (_dec = (0, _index4.default)('Page'), _dec(_class = (_temp2 = _class2 =
       _index2.default.navigateTo({
         url: '/pages/ucenter/order/order'
       });
-    }, _this.onSectionItemClick = function (event) {}, _this.exitLogin = function () {
+    }, _this.callPhone = function() {
+        my.makePhoneCall({ number: '02037268390' });
+    },_this.onSectionItemClick = function (event) {}, _this.exitLogin = function () {
       _index2.default.showModal({
         title: '',
         confirmColor: '#b4282d',
@@ -208,8 +210,9 @@ var _C = (_dec = (0, _index4.default)('Page'), _dec(_class = (_temp2 = _class2 =
   }, {
     key: "componentDidShow",
     value: function componentDidShow() {
+      let userInfo = typeof _index2.default.getStorageSync('userInfo') == 'string' ?  JSON.parse(_index2.default.getStorageSync('userInfo')) : _index2.default.getStorageSync('userInfo')
       this.setData({
-        userInfo: _index2.default.getStorageSync('userInfo') || app.globalData.userInfo
+        userInfo: userInfo ? userInfo : app.globalData.userInfo
       });
     }
   }, {
@@ -242,7 +245,7 @@ var _C = (_dec = (0, _index4.default)('Page'), _dec(_class = (_temp2 = _class2 =
   }]);
 
   return _C;
-}(_index2.default.Component), _class2.$$events = ["onUserInfoClick", "onCloseLoginDialog", "onDialogBody", "onWechatLogin", "onAlipayLogin"], _temp2)) || _class);
+}(_index2.default.Component), _class2.$$events = ["onUserInfoClick", "onCloseLoginDialog", "onDialogBody", "onWechatLogin", "onAlipayLogin", "callPhone"], _temp2)) || _class);
 
 exports.default = _C;
 

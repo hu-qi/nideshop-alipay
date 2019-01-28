@@ -282,7 +282,7 @@ var _C = (_dec = (0, _index4.default)('Page'), _dec(_class = (_temp2 = _class2 =
           productId: checkedProduct[0].id
         }, 'POST').then(function (res) {
           var _res = res;
-           console.log(res.errno)
+           console.log(res)
           if (_res.errno == 0) {
             _index2.default.showToast({
               title: '添加成功'

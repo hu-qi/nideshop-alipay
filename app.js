@@ -93,7 +93,7 @@ var _App = function (_Taro$Component) {
       this.$app.globalData = this.globalData;
 
       try {
-        this.globalData.userInfo = _index2.default.getStorageSync('userInfo');
+        this.globalData.userInfo = JSON.parse(_index2.default.getStorageSync('userInfo'));
         this.globalData.token = _index2.default.getStorageSync('token');
       } catch (e) {
         console.log(e);

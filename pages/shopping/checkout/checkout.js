@@ -78,8 +78,12 @@ var _C = (_dec = (0, _index4.default)('Page'), _dec(_class = (_temp2 = _class2 =
             goodsTotalPrice: res.data.goodsTotalPrice,
             orderTotalPrice: res.data.orderTotalPrice
           });
+        } else {
+          console.log('111')
+          my.navigateBack({
+            delta: 1
+          })
         }
-        console.log('111')
         _index2.default.hideLoading();
       });
     }, _this.selectAddress = function () {
