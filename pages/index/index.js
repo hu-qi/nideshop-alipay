@@ -57,8 +57,8 @@ var _C = (_dec = (0, _index4.default)('Page'), _dec(_class = (_temp2 = _class2 =
       channel: []
     }, _this.onShareAppMessage = function () {
       return {
-        title: 'NideShop',
-        desc: '仿网易严选微信小程序商城',
+        title: '亓行智能音箱汇',
+        desc: '智能硬件研发与销售的公司',
         path: '/pages/index/index'
       };
     }, _this.getIndexData = function () {

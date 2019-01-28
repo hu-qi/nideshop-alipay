@@ -43,7 +43,7 @@ var _App = function (_Taro$Component) {
       window: {
         backgroundTextStyle: 'dark',
         navigationBarBackgroundColor: '#fff',
-        navigationBarTitleText: '仿网易严选',
+        navigationBarTitleText: '智能音箱汇',
         navigationBarTextStyle: 'black',
         enablePullDownRefresh: true
       },
